@@ -1,0 +1,250 @@
+%\documentclass[12pt]{article}
+\documentclass[runningheads,a4paper]{llncs}
+
+\usepackage[american]{babel}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
+%extended enumerate, such as \begin{compactenum}
+\usepackage{paralist}
+
+%put figures inside a text
+%\usepackage{picins}
+%use
+%\piccaptioninside
+%\piccaption{...}
+%\parpic[r]{\includegraphics ...}
+%Text...
+
+%Sorts the citations in the brackets
+%\usepackage{cite}
+
+%for easy quotations: \enquote{text}
+\usepackage{csquotes}
+
+\usepackage[T1]{fontenc}
+
+%enable margin kerning
+\usepackage{microtype}
+
+%better font, similar to the default springer font
+\usepackage[%
+rm={oldstyle=false,proportional=true},%
+sf={oldstyle=false,proportional=true},%
+tt={oldstyle=false,proportional=true,variable=true},%
+qt=false%
+]{cfr-lm}
+%
+%if more space is needed, exchange cfr-lm by mathptmx
+%\usepackage{mathptmx}
+
+%for demonstration purposes only
+\usepackage[math]{blindtext}
+
+\usepackage[
+%pdfauthor={},
+%pdfsubject={},
+%pdftitle={},
+%pdfkeywords={},
+bookmarks=false,
+breaklinks=true,
+colorlinks=true,
+linkcolor=black,
+citecolor=black,
+urlcolor=black,
+%pdfstartpage=19,
+pdfpagelayout=SinglePage
+]{hyperref}
+%enables correct jumping to figures when referencing
+\usepackage[all]{hypcap}
+
+\usepackage[capitalise,nameinlink]{cleveref}
+%Nice formats for \cref
+\crefname{section}{Sect.}{Sect.}
+\Crefname{section}{Section}{Sections}
+\crefname{figure}{Fig.}{Fig.}
+\Crefname{figure}{Figure}{Figures}
+
+\usepackage{xspace}
+%\newcommand{\eg}{e.\,g.\xspace}
+%\newcommand{\ie}{i.\,e.\xspace}
+\newcommand{\eg}{e.\,g.,\ }
+\newcommand{\ie}{i.\,e.,\ }
+
+%introduce \powerset - hint by http://matheplanet.com/matheplanet/nuke/html/viewtopic.php?topic=136492&post_id=997377
+\DeclareFontFamily{U}{MnSymbolC}{}
+\DeclareSymbolFont{MnSyC}{U}{MnSymbolC}{m}{n}
+\DeclareFontShape{U}{MnSymbolC}{m}{n}{
+    <-6>  MnSymbolC5
+   <6-7>  MnSymbolC6
+   <7-8>  MnSymbolC7
+   <8-9>  MnSymbolC8
+   <9-10> MnSymbolC9
+  <10-12> MnSymbolC10
+  <12->   MnSymbolC12%
+}{}
+\DeclareMathSymbol{\powerset}{\mathord}{MnSyC}{180}
+
+%improve wrapping of URLs - hint by http://tex.stackexchange.com/a/10419/9075
+\makeatletter
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\makeatother
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+\begin{document}
+
+%Works on MiKTeX only
+%hint by http://goemonx.blogspot.de/2012/01/pdflatex-ligaturen-und-copynpaste.html
+%also http://tex.stackexchange.com/questions/4397/make-ligatures-in-linux-libertine-copyable-and-searchable
+%This allows a copy'n'paste of the text from the paper
+\input glyphtounicode.tex
+\pdfgentounicode=1
+
+\title{Overview of the Talks of Other Students}
+%If Title is too long, use \titlerunning
+%\titlerunning{Short Title}
+
+%Single insitute
+\author{Jana Cavojska}
+%If there are too many authors, use \authorrunning
+%\authorrunning{First Author et al.}
+\institute{Freie Universität Berlin}
+
+%Multiple insitutes
+%Currently disabled
+%
+\iffalse
+%Multiple institutes are typeset as follows:
+\author{Firstname Lastname\inst{1} \and Firstname Lastname\inst{2} }
+%If there are too many authors, use \authorrunning
+%\authorrunning{First Author et al.}
+
+\institute{
+Insitute 1\\
+\email{...}\and
+Insitute 2\\
+\email{...}
+}
+\fi
+			
+\maketitle
+
+\begin{abstract}
+This paper provides a summary of the talks given by students during the ``Data Visualization and Mining Seminar'' in WS 2015/16, as well as the opinions of the author of this summary on each of the talks.
+\end{abstract}
+
+\keywords{visualization, data mining, talk summary}
+%\tableofcontents
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\section{Introduction}\label{sec:intro}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\blindtext
+%
+%Winery~\cite{Winery} is graphical modeling tool.
+%
+%\begin{figure}
+%Simple Figure
+%\caption{Simple Figure}
+%\label{fig:simple}
+%\end{figure}
+%
+%\begin{table}
+%\caption{Simple Table}
+%
+%\label{tab:simple}
+%Simple Table
+%\end{table}
+%
+%cref Demonstration: Cref at beginning of sentence, cref in all other cases.
+%
+%\Cref{fig:simple} shows a simple fact, although \cref{fig:simple} could also show something else.
+%
+%\Cref{tab:simple} shows a simple fact, although \cref{tab:simple} could also show something else.
+%
+%\Cref{sec:intro} shows a simple fact, although \cref{sec:intro} could also show something else.
+%
+%Brackets work as designed:
+%<test>
+%
+%The symbol for powerset is now correct: $\powerset$ and not a Weierstrass p ($\wp$).
+%
+%\begin{inparaenum}
+%\item All these items...
+%\item ...appear in one line
+%\item This is enabled by the paralist package.
+%\end{inparaenum}
+%
+%``something in quotes'' using plain tex or use \enquote{the enquote command}.
+%
+%\section{Conclusion and Outlook}
+%
+%\subsubsection*{Acknowledgments}
+%...
+%In the bibliography, use \texttt{\textbackslash textsuperscript} for ``st'', ``nd'', ...:
+%E.g., \enquote{The 2\textsuperscript{nd} conference on examples}.
+
+\section{Talk 1}
+\textit{Author:} \textbf{Alexandros Papanikos}\\
+\textit{Topic:}\hspace{0.25cm} \textbf{Spatial Data Mining}\\
+\\
+\textit{Summary:} \\
+This talk introduced the area of spatial mining as ``discovering non-trivial, interesting and useful patterns from large datasets''. Alexandros presented the reason why this taks is difficult, such as
+\begin{itemize}
+\item complexity of data
+\item growth of the spatial data collection
+\item need for high efficiency of the algorithms being used
+\end{itemize}
+Some of the most common problems were mentioned,  such as clustering.\\
+A couple of applications were described as well, such as
+\begin{itemize}
+\item GIS (geographic information systems)
+\item medical imaging
+\item robot navigation
+\item public health
+\item transportation
+\item environmental science (climate change...)
+\item computer cartography
+\item ...
+\end{itemize}
+Some of the tasks that spacial data mining aims to accomplish:
+\begin{itemize}
+\item classification
+\item finding association rules (What belongs together?)
+\item discriminate rules (finding differences between parts of database)
+\item trend detection (finding temporal patterns in data)
+\item ...
+\end{itemize}
+
+\noindent\textit{Remarks:}\\
+\textit{Pros:}\\
+Alexandros gave a good overview of the topic, the problems-applications-goals structure was helpful, making it possible to create a mental picture of the field even if one has not dealt with the topic before.\\
+He managed to make many general examples, mentioning areas where his topic is relevant, as well as introducing some technical terms from his field, but not too many, which would have overwhelmed the audience.\\
+\\
+\textit{Cons:}\\
+The talk was a bit too short (only 15 minutes). Maybe to fill the gap, some of the content of the 2. half of the talk culd have been outlined, or some specific algorithms could have been mentioned.\\
+Also, more specific examples could have helped to create a more persistent mental picture of the topic in the heads of the audience, like describing one scenario in which spatial data mining is used.\\
+Also missing was a clear and simple definition of the term ``spatial data''.
+
+
+\newpage
+\section{Talk 2}
+\textit{Author:} \textbf{Dimitris Bourgiotis}\\
+\textit{Topic:} \hspace{0.1cm} \textbf{Data Mining in Medical Data}\\
+\\
+\textit{Summary:} \\
+The author, Dimistris, explained that medical data in this context is all information patients provide during their care. Since it was not at the centre of this talk, the information gathering process was not further ellaborated.\\
+He described some of the problems that arise when gathering this sort of data, such as medical errors (which are both harmful and expensive)
+\textit{Remarks:} \\
+\textit{Pros:}\\
+\textit{Cons:}\\
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\bibliographystyle{splncs03}
+\bibliography{paper}
+
+%All links were last followed on October 5, 2014.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

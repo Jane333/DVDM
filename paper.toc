@@ -1,0 +1,6 @@
+\select@language {american}
+\contentsline {title}{Overview of the Talks of Other Students}{1}{chapter.1}
+\authcount {1}
+\contentsline {author}{Jana Cavojska}{1}{chapter.1}
+\contentsline {section}{\numberline {1}Talk 1}{2}{section.1.1}
+\contentsline {section}{\numberline {2}Talk 2}{2}{section.1.2}
